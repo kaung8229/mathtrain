@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Exam</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <button class="darkmode-btn"></button>
+    
+    <div class="exam-container">
+
+        <!-- inputs -->
+        <div class="input-container">
+
+            <h3 class="title">Math Trainer</h3>
+
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="level">Level</label>
+                    <input type="number" name="level" min="5" max="100" id="level" class="form-control" placeholder="Enter" />
+                    <span class="erro leverr d-none">*Level shouldn't be empty.</span>
+                    <span class="erro leverr2 d-none">*Level shouldn't less than 5.</span>
+                </div>
+                <div class="input-group">
+                    <label for="limit">Limit questions</label>
+                    <input type="number" name="limit" min="3" max="10" id="limit" value="7" class="form-control" placeholder="Enter" />
+                </div>
+                <div class="input-group">
+                    <label for="digs">Digits</label>
+                    <input type="number" name="digs" id="digs" value="1" class="form-control" placeholder="Enter" />
+                    <span class="erro digserr d-none">*Digit shouldn't be empty.</span>
+                </div>
+
+                <div class="input-group checks">
+                    <input type="checkbox" name="minus" id="minus" value="1" />
+                    <label for="minus">Include minus</label>
+                </div>
+
+                <button type="button" class="submit-btn">Start</button>
+            </div>
+
+        </div>
+        <!-- inputs -->
+
+
+        <!-- start test -->
+        <div class="testing-container d-none">
+            
+            <div class="title">
+                <h3 class="lev-title">Level <span id="lev">1</span></h3>
+                <p><span id="bylev">1</span> / <span id="levels">10</span></p>
+            </div>
+
+            <div class="time-container">
+                <p>Time - ( <span id="times">00:00</span> )</p>
+            </div>
+
+            <ul class="ques-container">
+                <li>10</li>
+                <li>20</li>
+                <li>20</li>
+                <li>20</li>
+                <li>20</li>
+            </ul>
+
+            <form action="" method="" autocomplete="off">
+                <div class="ans-box">
+                    <input type="number" name="ans" id="ans" class="form-control" placeholder="Answer">
+                </div>
+    
+                <div class="btn-group">
+                    <button type="button" class="btn back-btn">Back</button>
+                    <button type="submit" class="btn ans-btn">Next</button>
+                </div>
+            </form>
+
+        </div>
+        <!-- start test -->
+
+
+        <!-- win&lose -->
+        <div class="blur d-none">
+            <div class="scorebox">
+                <h3 class="award">Great</h3>
+                <ul class="res-list">
+                    <li class="res-item">
+                        <span>Score</span>
+                        <span id="score">100</span>
+                    </li>
+                    <li class="res-item">
+                        <span>Correct</span>
+                        <span>
+                            <span id="correctans">5</span>
+                            /
+                            <span id="totalqes">10</span>
+                        </span>
+                    </li>
+                    <li class="res-item">
+                        <span>Time</span>
+                        <span id="curtime">00:00</span>
+                    </li>
+                </ul>
+                <h3 class="inc-list">Incorrect List</h3>
+                <ul class="history-list">
+                    <li class="his-item">
+                        <p><span>level - 1</span> <span>Ans - 100</span></p>
+                        <p><span></span> <span>150</span></p>
+                    </li>
+                </ul>
+                <button type="button" class="again-btn">Start Again</button>
+            </div>
+        </div>
+        <!-- win&lose -->
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
