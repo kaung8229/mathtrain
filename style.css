@@ -98,11 +98,30 @@ body{
     cursor: pointer;
 }
 
+.toggle-section{
+    position: absolute;
+    top: -20px;
+    right: -110px;
+
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: var(--black);
+    color: var(--white);
+
+    cursor: pointer;
+}
+.toggle-section:hover{
+    opacity: 0.8;
+}
+
 .exam-container{
     /* position: relative; */
     width: 600px;
     background: var(--bg-box-color);
-    padding: 40px 30px;
+    padding: 50px 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px var(--box-shad);
     text-align: center;
@@ -119,7 +138,7 @@ body{
     position: relative;
     letter-spacing: 2px;
     font-size: 1.8em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .input-container .title::before{
@@ -133,7 +152,12 @@ body{
     background: var(--black);
 }
 
-.input-container .inputs{
+.title-sec{
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.inputs{
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -157,7 +181,7 @@ body{
 
 .input-group .erro{
     position: absolute;
-    left: 110px;
+    left: 45%;
     bottom: -20px;
 
     font-size: 14px;
@@ -205,7 +229,11 @@ body{
 .testing-container{
     position: relative;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 120px);
+}
+
+.testing-container.multipling{
+    height: calc(50vh - 90px);
 }
 
 .testing-container .title{
@@ -217,17 +245,7 @@ body{
     border-radius: 10px;
     color: #fff;
 }
-/* .testing-container .title::before{
-    content: '';
-    position: absolute;
-    bottom: 53px;
-    left: calc(50% - 50px);
 
-    width: 100px;
-    height: 2px;
-    border-radius: 10px;
-    background: var(--black);
-} */
 .testing-container .title .lev-title{
     font-size: 1.5em;
     margin-bottom: 5px;
@@ -270,6 +288,21 @@ body{
 .ques-container li{
     width: 55%;
     text-align: end;
+}
+
+
+.multique{
+    display: flex;
+    flex-direction: row;
+}
+.multique li{
+    width: 100%;
+    text-align: center;
+}
+.multique li .mnum{
+    display: inline-block;
+    width: 40%;
+    /* background: red; */
 }
 
 .ans-box{
@@ -320,7 +353,8 @@ body{
     opacity: 0.7;
 }
 
-.btn.back-btn{
+.btn.pback-btn,
+.btn.mback-btn{
     background: var(--white);
     color: var(--black);
     border: 1px solid var(--b-color-controls-focus);
@@ -332,7 +366,8 @@ body{
     background: var(--next-active);
 }
 
-.btn-group.backactive .btn.back-btn{
+.btn-group.backactive .btn.pback-btn,
+.btn-group.backactive .btn.mback-btn{
     visibility: visible;
 }
 /* btn-group */
@@ -472,6 +507,10 @@ body{
         width: 100%;
         padding: 40px 40px;
     }
+    .toggle-section {
+        top: -30px;
+        right: -28px;
+    }
 
     .input-container {
         width: 100%;
@@ -483,6 +522,10 @@ body{
 
     .input-group .form-control {
         width: 60%;
+    }
+
+    .scorebox {
+        width: 100%;
     }
 
 }

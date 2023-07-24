@@ -19,7 +19,10 @@
 
             <h3 class="title">Math Trainer</h3>
 
-            <div class="inputs">
+            <button class="toggle-section">Multiply</button>
+
+            <h3 class="title-sec">( addition )</h3>
+            <div class="inputs forplus">
                 <div class="input-group">
                     <label for="level">Level</label>
                     <input type="number" name="level" min="5" max="100" id="level" class="form-control" placeholder="Enter" />
@@ -35,13 +38,30 @@
                     <input type="number" name="digs" id="digs" value="1" class="form-control" placeholder="Enter" />
                     <span class="erro digserr d-none">*Digit shouldn't be empty.</span>
                 </div>
-
+    
                 <div class="input-group checks">
                     <input type="checkbox" name="minus" id="minus" value="1" />
                     <label for="minus">Include minus</label>
                 </div>
 
-                <button type="button" class="submit-btn">Start</button>
+                <button type="button" class="submit-btn plus">Start</button>
+            </div>
+
+            <div class="inputs formultiply d-none">
+                <div class="input-group">
+                    <label for="multilevel">Level</label>
+                    <input type="number" name="multilevel" min="5" max="100" id="multilevel" class="form-control" placeholder="Enter" />
+                    <span class="erro multileverr d-none">*Level shouldn't be empty.</span>
+                    <span class="erro multileverr2 d-none">*Level shouldn't less than 5.</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="multidigs">Digits</label>
+                    <input type="number" name="multidigs" id="multidigs" value="1" class="form-control" placeholder="Enter" />
+                    <span class="erro multidigserr d-none">*Digit shouldn't be empty.</span>
+                </div>
+
+                <button type="button" class="submit-btn multi">Start</button>
             </div>
 
         </div>
@@ -60,24 +80,43 @@
                 <p>Time - ( <span id="times">00:00</span> )</p>
             </div>
 
-            <ul class="ques-container">
-                <li>10</li>
-                <li>20</li>
-                <li>20</li>
-                <li>20</li>
-                <li>20</li>
-            </ul>
-
-            <form action="" method="" autocomplete="off">
-                <div class="ans-box">
-                    <input type="number" name="ans" id="ans" class="form-control" placeholder="Answer">
-                </div>
+            <div class="plus-ques">
+                <ul class="ques-container plusque">
+                    <li>10</li>
+                    <li>20</li>
+                    <li>20</li>
+                    <li>20</li>
+                    <li>20</li>
+                </ul>
     
-                <div class="btn-group">
-                    <button type="button" class="btn back-btn">Back</button>
-                    <button type="submit" class="btn ans-btn">Next</button>
-                </div>
-            </form>
+                <form action="" method="" autocomplete="off">
+                    <div class="ans-box">
+                        <input type="number" name="ans" id="ans" class="form-control" placeholder="Answer">
+                    </div>
+        
+                    <div class="btn-group">
+                        <button type="button" class="btn pback-btn">Back</button>
+                        <button type="submit" class="btn pans-btn">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="multi-ques d-none">
+                <ul class="ques-container multique">
+                    <li><span class="mnum mtnum">20</span> x <span class="mnum multiplier">10</span></li>
+                </ul>
+    
+                <form action="" method="" autocomplete="off">
+                    <div class="ans-box">
+                        <input type="number" name="multians" id="multians" class="form-control" placeholder="Answer">
+                    </div>
+        
+                    <div class="btn-group">
+                        <button type="button" class="btn mback-btn">Back</button>
+                        <button type="submit" class="btn mans-btn">Next</button>
+                    </div>
+                </form>
+            </div>
 
         </div>
         <!-- start test -->
@@ -88,10 +127,10 @@
             <div class="scorebox">
                 <h3 class="award">Great</h3>
                 <ul class="res-list">
-                    <li class="res-item">
+                    <!-- <li class="res-item">
                         <span>Score</span>
                         <span id="score">100</span>
-                    </li>
+                    </li> -->
                     <li class="res-item">
                         <span>Correct</span>
                         <span>
